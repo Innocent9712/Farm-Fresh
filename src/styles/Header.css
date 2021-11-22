@@ -1,0 +1,25 @@
+@layer components {
+    header {
+        @apply container flex justify-between px-12 py-4 mb-2 bg-green-200;
+    }
+    .logo-nav-container {
+        @apply flex w-3/5 justify-around;
+    }
+
+    .nav {
+        @apply flex w-3/5 justify-evenly items-center;
+    }
+
+    .user-nav-profile {
+        @apply flex items-center;
+    }
+
+    .profile {
+        @apply w-12 h-12 mx-4;
+        border-radius:50%;
+    }
+
+    .user-nav-profile p {
+        @apply border-2 rounded-md px-3 py-1;
+    }
+}

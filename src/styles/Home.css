@@ -1,0 +1,9 @@
+@layer components {
+    .home-splash {
+        /* @apply bg-home-splash h-10 bg-black; */
+        background-color: url("/src/assets/farm-home.jpg");
+    }
+}
+/* .home {
+    background: url("/src/assets/farm-home.jpg");
+} */
