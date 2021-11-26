@@ -1,13 +1,89 @@
 @layer components {
+    .header {
+        @apply w-full;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: #FAFFFD;
+    }
+
     header {
-        @apply container flex justify-between px-12 py-4 mb-2 bg-green-200;
+        @apply container flex justify-between px-6 py-4 mb-2;
+        max-width: 1200px;
+        margin-inline: auto;
     }
     .logo-nav-container {
-        @apply flex w-3/5 justify-around;
+        @apply flex w-2/5 sm:w-3/5 justify-around;
+    }
+    .logo-nav-container svg {
+        @apply ml-0;
     }
 
     .nav {
-        @apply flex w-3/5 justify-evenly items-center;
+        @apply sm:flex md:w-4/5 lg:w-3/5 sm:w-8 justify-evenly items-center hidden;
+    }
+    .nav li {
+        height: 100%;
+        padding-top: 0.5em;
+        min-width: 20%;
+        text-align: center;
+    }
+
+    .nav li a {
+        margin-inline: 0.5rem;
+    }
+
+    .nav li, .mobile-nav li {
+        color: #182520;
+    }
+
+    .nav li a:active {
+        font-weight: 500;
+    }
+
+    .nav li:hover {
+        background-color: #182520;
+        color: #FAFFFD;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .mobile-nav {
+        background-color: #182520;
+        position: absolute;
+        top: 0;
+        left: -60%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-right;
+        align-items: center;
+        padding-top: 5em;
+        width: 60%;
+        height:  100vh;
+        z-index: 1;
+    }
+
+    .mobile-nav li {
+        padding: 0.5em 0;
+        color: #FAFFFD;
+    }
+    .show-nav {
+        left: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .hide-nav {
+        left: -60%;
+        transition: all 0.5s ease-in-out;
+
+    }
+
+    .menu-btn {
+        @apply sm:hidden;
+        position: absolute;
+        top: 35px;
+        left: 25px;
+        z-index: 2;
     }
 
     .user-nav-profile {
@@ -20,6 +96,12 @@
     }
 
     .user-nav-profile p {
-        @apply border-2 rounded-md px-3 py-1;
+        @apply  px-3 py-1 text-xs sm:text-sm;
+    }
+
+    .user-nav-profile button:last-child {
+        @apply border-2 rounded-md;
+        background-color: #182520;
+        color: #FAFFFD;
     }
 }

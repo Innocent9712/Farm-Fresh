@@ -1,9 +1,31 @@
 @layer components {
+    section {
+        @apply bg-white mt-28;
+        max-width: 1200px;
+        margin-inline: auto;
+    }
     .home-splash {
-        /* @apply bg-home-splash h-10 bg-black; */
-        background-color: url("/src/assets/farm-home.jpg");
+        position: relative;
+        @apply flex py-8 my-8 px-3 sm:py-12 md:px-10;
+        background-image: linear-gradient(to right, rgba(16, 24, 21, 0.2) 60%,rgba(169, 198, 184, 0.3) 80%),
+        url("../assets/farm-home.jpg");
+        background-size: cover;
+        /* background-position: 0 -130px; */
+        background-repeat: no-repeat;
+    }
+
+    .home-splash h1 {
+        @apply text-white text-4xl font-semibold;
+        flex-basis: 80%;
+    }
+
+    @media screen and (min-width: 640px) {
+        .home-splash {
+            background-position: 0 center;
+        }
+
+        .home-splash h1 {
+            flex-basis: 50%
+        }
     }
 }
-/* .home {
-    background: url("/src/assets/farm-home.jpg");
-} */
